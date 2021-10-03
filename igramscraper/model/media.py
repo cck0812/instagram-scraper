@@ -32,6 +32,7 @@ class Media(InitializerModel):
         self.video_low_bandwidth_url = None
         self.video_views = 0
         self.video_url = None
+        self.accessibility_caption = None
         # account object
         self.owner = None
         self.likes_count = 0
@@ -243,6 +244,9 @@ class Media(InitializerModel):
                 self.type = Media.TYPE_VIDEO
             elif value == 'GraphSidecar':
                 self.type = Media.TYPE_SIDECAR
+
+        elif prop == 'accessibility_caption':
+            self.accessibility_caption = value
 
         # if self.ownerId and self.owner != None:
         #     self.ownerId = self.getOwner().getId()
