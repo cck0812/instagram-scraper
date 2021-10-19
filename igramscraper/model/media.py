@@ -190,7 +190,7 @@ class Media(InitializerModel):
             self.short_code = value
             self.link = endpoints.get_media_page_link(self.short_code)
 
-        elif prop == 'edge_media_to_comment':
+        elif prop == 'edge_media_to_parent_comment':
             try:
                 self.comments_count = int(arr[prop]['count'])
             except KeyError:

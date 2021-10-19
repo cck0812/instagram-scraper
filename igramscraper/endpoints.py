@@ -8,7 +8,7 @@ STORIES = '17873473675158481'
 BASE_URL = 'https://www.instagram.com'
 LOGIN_URL = 'https://www.instagram.com/accounts/login/ajax/'
 ACCOUNT_PAGE = 'https://www.instagram.com/%s'
-MEDIA_LINK = 'https://www.instagram.com/p/%s'
+MEDIA_LINK = 'https://www.instagram.com/p/%s/?__a=1&max_id='
 ACCOUNT_MEDIAS = 'https://www.instagram.com/graphql/query/?query_hash=bfa387b2992c3a52dcbe447467b4b771&variables=%s'
 ACCOUNT_TAGGED_MEDIAS = 'https://www.instagram.com/graphql/query/?query_hash=ff260833edf142911047af6024eb634a&variables=%s'
 ACCOUNT_JSON_INFO = 'https://www.instagram.com/%s/?__a=1'
@@ -171,4 +171,3 @@ def get_add_comment_url(media_id):
 
 def get_delete_comment_url(media_id, comment_id):
     return DELETE_COMMENT_URL % (urllib.parse.quote_plus(str(media_id)), urllib.parse.quote_plus(str(comment_id)))
-
