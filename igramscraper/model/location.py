@@ -11,6 +11,7 @@ class Location(InitializerModel):
         self.slug = None
         self.lat = None
         self.lng = None
+        self.address_json = None
         self.modified = None
         super(Location, self).__init__(props)
 
@@ -38,6 +39,7 @@ class Location(InitializerModel):
             'slug',
             'lat',
             'lng',
+            'address_json',
             'modified',
         ]
 
